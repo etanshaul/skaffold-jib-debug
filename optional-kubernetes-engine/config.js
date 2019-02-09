@@ -69,6 +69,7 @@ nconf
     MYSQL_USER: '',
     MYSQL_PASSWORD: '',
 
+    // This isn't very safe...
     OAUTH2_CLIENT_ID: '838439788478-t7jehcjbuq9c2ktv6es9bep6eorm60qu.apps.googleusercontent.com',
     OAUTH2_CLIENT_SECRET: 'iFSI-lX38iNbHecjvaBXM1bU',
     OAUTH2_CALLBACK: 'http://test.gcp-next-2019.com/auth/google/callback',
