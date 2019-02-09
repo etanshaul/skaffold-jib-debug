@@ -69,9 +69,9 @@ nconf
     MYSQL_USER: '',
     MYSQL_PASSWORD: '',
 
-    OAUTH2_CLIENT_ID: 'your-client-id',
-    OAUTH2_CLIENT_SECRET: 'your-client-secret',
-    OAUTH2_CALLBACK: 'http://localhost:8080/auth/google/callback',
+    OAUTH2_CLIENT_ID: '838439788478-t7jehcjbuq9c2ktv6es9bep6eorm60qu.apps.googleusercontent.com',
+    OAUTH2_CLIENT_SECRET: 'iFSI-lX38iNbHecjvaBXM1bU',
+    OAUTH2_CALLBACK: 'http://test.gcp-next-2019.com/auth/google/callback',
 
     PORT: 8080,
 
