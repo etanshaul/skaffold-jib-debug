@@ -47,7 +47,7 @@ nconf
   // 4. Defaults
   .defaults({
     // Typically you will create a bucket with the same name as your project ID.
-    CLOUD_BUCKET: '',
+    CLOUD_BUCKET: 'bookshelf-next',
 
     // dataBackend can be 'datastore', 'cloudsql', or 'mongodb'. Be sure to
     // configure the appropriate settings for each storage engine below.
@@ -56,7 +56,7 @@ nconf
     DATA_BACKEND: 'datastore',
 
     // This is the id of your project in the Google Cloud Developers Console.
-    GCLOUD_PROJECT: '',
+    GCLOUD_PROJECT: 'cloud-sharp-test',
 
     // Connection url for the Memcache instance used to store session data
     MEMCACHE_URL: 'localhost:11211',

@@ -32,7 +32,10 @@ const pubsub = new PubSub({
 function getTopic(cb) {
   pubsub.createTopic(topicName, (err, topic) => {
     // topic already exists.
+    logging.error("HEREERERER:getTopic");
+    logging.error(JSON.stringify(err));
     if (err && err.code === 6) {
+      logging.error("ERROR");
       cb(null, pubsub.topic(topicName));
       return;
     }
@@ -59,11 +62,17 @@ function subscribe(cb) {
 
   getTopic((err, topic) => {
     if (err) {
+      logging.error("HEREERERER:subscribe");
       cb(err);
       return;
     }
+    topic.
 
-    topic.createSubscription(subscriptionName, (err, sub) => {
+    topic.subscription(subscriptionName, (err, sub) => {
+      logging.error("HEREERERER:subscription");
+      logging.error(JSON.stringify(err));
+      logging.error(JSON.stringify(sub));
+      logging.error("HEREERERER:subscription-end");
       if (err) {
         cb(err);
         return;

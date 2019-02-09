@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
-const MemcachedStore = require('connect-memcached')(session);
+//const MemcachedStore = require('connect-memcached')(session);
 const passport = require('passport');
 const config = require('./config');
 const logging = require('./lib/logging');
@@ -48,11 +48,11 @@ const sessionConfig = {
 
 // In production use the App Engine Memcache instance to store session data,
 // otherwise fallback to the default MemoryStore in development.
-if (config.get('NODE_ENV') === 'production' && config.get('MEMCACHE_URL')) {
-  sessionConfig.store = new MemcachedStore({
-    hosts: [config.get('MEMCACHE_URL')],
-  });
-}
+//if (config.get('NODE_ENV') === 'production' && config.get('MEMCACHE_URL')) {
+//  sessionConfig.store = new MemcachedStore({
+//    hosts: [config.get('MEMCACHE_URL')],
+//  });
+//}
 
 app.use(session(sessionConfig));
 

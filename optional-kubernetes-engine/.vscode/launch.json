@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "kubecode",
+            "language": "Node",
+            "request": "attach",
+            "debugPort": 9229,
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/app",
+            "name": "Attach App on Kubernetes Cluster: NodeJS",
+            "podSelector": {
+                "app": "bookshelf-app"
+            }
+        },
+    {
+        
+    }
+    ]
+}

@@ -1,0 +1,11 @@
+apiVersion: skaffold/v1beta2
+kind: Config
+build:
+  artifacts:
+  - image: gcr.io/cloud-sharp-test/bookshelf
+deploy:
+  kubectl:
+    manifests:
+      - bookshelf-service.yaml
+      - bookshelf-frontend-datastore.yaml
+      - bookshelf-worker-datastore.yaml
