@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "kubecode",
+            "type": "cloudcode",
             "language": "Node",
             "request": "attach",
             "debugPort": 9229,
@@ -10,11 +10,8 @@
             "remoteRoot": "/app",
             "name": "Attach App on Kubernetes Cluster: NodeJS",
             "podSelector": {
-                "app": "bookshelf-app"
+                "app": "bookshelf"
             }
-        },
-    {
-        
-    }
+        }
     ]
 }
