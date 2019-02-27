@@ -66,7 +66,6 @@ function subscribe(cb) {
       cb(err);
       return;
     }
-    topic.
 
     topic.subscription(subscriptionName, (err, sub) => {
       logging.error("HEREERERER:subscription");
