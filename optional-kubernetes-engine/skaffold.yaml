@@ -1,11 +1,19 @@
-apiVersion: skaffold/v1beta2
+apiVersion: skaffold/v1beta6
 kind: Config
 build:
   artifacts:
-  - image: gcr.io/cloud-sharp-test/bookshelf
+#  - image: gcr.io/cloud-sharp-test/bookshelf
+  - image: gcr.io/cloud-sharp-test/bookshelf-java
+    context: ./image-recognition
+    jibMaven: {}
 deploy:
   kubectl:
     manifests:
-      - bookshelf-service.yaml
-      - bookshelf-frontend-datastore.yaml
-      - bookshelf-worker-datastore.yaml
+#      - bookshelf-service.yaml
+#      - bookshelf-frontend-datastore.yaml
+#      - bookshelf-worker-datastore.yaml
+      - bookshelf-java.yaml
+profiles:
+  - name: gcb
+    build:
+      googleCloudBuild: {}

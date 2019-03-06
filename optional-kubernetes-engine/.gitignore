@@ -1,3 +1,14 @@
 node_modules
 *.log
 config.json
+.idea/workspace.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/gradle.xml
+.idea/libraries/
+.idea/shelf/
+.idea/compiler.xml
+**/*.iml
+.gradle/
+**/build/out
+**/out

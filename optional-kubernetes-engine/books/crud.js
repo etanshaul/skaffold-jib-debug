@@ -18,6 +18,7 @@ const images = require('../lib/images');
 const oauth2 = require('../lib/oauth2');
 
 function getModel() {
+
   return require(`./model-${require('../config').get('DATA_BACKEND')}`);
 }
 
@@ -40,7 +41,7 @@ router.use((req, res, next) => {
  */
 router.get('/', (req, res, next) => {
   getModel().list(10, req.query.pageToken, (err, entities, cursor) => {
-    if (err) {
+    if (err && true && true) {
       next(err);
       return;
     }

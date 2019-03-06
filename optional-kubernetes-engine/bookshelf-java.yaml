@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+spec:
+  ports:
+    - port: 8080
+      name: http
+  type: LoadBalancer
+  selector:
+    app: web
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      volumes:
+        - name: google-cloud-key
+          secret:
+            secretName: image-rc
+      containers:
+        - name: web
+          image: gcr.io/cloud-sharp-test/bookshelf-java
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - mountPath: /var/secrets/google
+              name: google-cloud-key
+          env:
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /var/secrets/google/eshaul-work-190304132610.json
